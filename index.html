@@ -882,7 +882,7 @@ function searchItems() {
 
     let found = false;
 
-    // Reset highlights and scroll
+
     items.forEach(item => {
         if (!item.dataset.original) {
             item.dataset.original = item.textContent;
@@ -898,7 +898,7 @@ function searchItems() {
         return;
     }
 
-    // Highlight matches
+   
     for (let item of items) {
         const text = item.dataset.original.toLowerCase();
 
@@ -912,12 +912,12 @@ function searchItems() {
             const card = item.closest(".card");
             if (card) {
                 card.classList.add("found");
-                // Scroll the first matching card into view
+               
                 card.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
 
             found = true;
-            break; // Scroll to the first match only
+            break;
         }
     }
 
@@ -929,3 +929,4 @@ function searchItems() {
 
 </body>
 </html>
+
